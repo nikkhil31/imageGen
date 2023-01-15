@@ -7,7 +7,9 @@ provider:
   runtime: nodejs18.x
   stage: dev
   region: us-east-1
+  timeout: 15
 
+  
 functions:
   app:
     handler: handler.hello # reference the file and exported method
