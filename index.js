@@ -4,7 +4,7 @@ import apiRouter from './app/routes/apiRoutes.js'
 import pool from "./app/config/postgresql.js"
 
 const app = express()
-const port = 3000
+
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
@@ -27,8 +27,9 @@ app.use((err, req, res) => {
   }
 })
 
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`)
-})
+
+
+
+export default app
 
 
