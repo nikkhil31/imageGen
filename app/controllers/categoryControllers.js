@@ -32,7 +32,7 @@ export const updateCategory = asyncHandler(async (req, res) => {
     return res.json('Updated')
 })
 
-export const deleteCategory = asyncHandler(async () => {
+export const deleteCategory = asyncHandler(async (req,res) => {
 
     const { id } = req.body
     const { rows } = await db.query('DELETE FROM categories WHERE id = $1', [id])

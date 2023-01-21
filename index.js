@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 
 import apiRouter from './app/routes/apiRoutes.js'
 import pool from "./app/config/postgresql.js"
@@ -8,6 +9,11 @@ const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+
+
+app.use(cors({
+  origin: '*'
+}));
 
 pool.connect()
 
